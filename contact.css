@@ -1,3 +1,26 @@
 .italics{
     font-style: italic;
+    text-align: left;
+}
+
+
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info{
+    text-align: left;
+}
+
+.model > img{
+    align-content: flex-start;
+    opacity: 0.75;
+    border-radius: 1%;
+}
+
+.list{
+    list-style-type: none;
+    text-align: center;
 }
