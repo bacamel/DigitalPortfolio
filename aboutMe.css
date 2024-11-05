@@ -1,17 +1,120 @@
-.Philosophy{
+/* General grid setup for the page */
+.photo-quote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto;
+    gap: 20px; 
+    padding: 20px;
     margin-top: 20px;
-    text-align: left;
 }
 
-.Quote{
-    text-align: left;
+/* Photo section: takes up the first column */
+.photo {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.bold{
-    font-weight: bolder;
+.melinda{
+    border: 5px solid black;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
-.quote{
-    font-size: 15px;
-    text-align: left;
+/* Author name section: occupies the second row */
+.author-name {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
+
+/* Quote name section: occupies the third row */
+.quote {
+    grid-column: 1;
+    text-align: center;  
+    grid-row: 3;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* Resume section: appears below quote and spans across columns */
+.resume {
+    /* Spans across all columns */
+    grid-column: 2 / span 3; 
+    grid-row: 1 / span 5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFF4F5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Styling for resume content */
+.p-resume, .p-resume-ex {
+    font-size: 1rem;
+    margin: 8px 0;
+    font-weight: 100;
+}
+
+.p-resume-ex{
+    margin-left: 10%;
+    text-align: left;
+    
+}
+
+.p-resume-pending{
+    margin-bottom: 100px;
+}
+
+
+
+/* For smaller screens (less than 768px: mobile devices) */
+@media (max-width: 768px) {
+    .photo-quote-grid {
+        grid-template-columns: 1fr;  /* One column for smaller screens */
+        grid-template-rows: auto auto auto auto;
+    }
+
+    /* Photo section: Center image on small screens */
+    .photo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* Author name section: Center text */
+    .author-name {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 1.2rem;
+    }
+
+    /* Quote section: Center quote text */
+    .quote {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 1.1rem;
+    }
+
+    /* Resume section: Center text and stack items */
+    .resume {
+        grid-column: 1;
+        grid-row: 4;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .p-resume, .p-resume-ex {
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+}
+
