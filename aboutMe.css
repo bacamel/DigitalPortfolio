@@ -4,123 +4,56 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* General grid setup for the page */
-.photo-quote-grid {
+.photo-quote-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto auto auto;
-    gap: 20px; 
-    padding: 20px;
-    margin-top: 20px;
+    grid-template-columns: 1fr 1fr 0.75fr;
+    height: 100vh;
+    align-items: center;
 }
 
-/* Photo section: takes up the first column */
-.photo {
+
+.left-side{
     grid-column: 1;
-    grid-row: 1;
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    gap: 10px;
 }
 
-.melinda{
-    border: 5px solid black;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+.photo{
+    width: auto;
+    height: auto;
+    align-self: start;
 }
 
-/* Author name section: occupies the second row */
-.author-name {
-    grid-column: 1;
-    grid-row: 2;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+.core-competencies{
+    align-self: start;
 }
 
-/* Quote name section: occupies the third row */
-.quote {
-    grid-column: 1;
-    text-align: center;  
-    grid-row: 3;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    font-style: italic;
-    font-size: 1.2rem;
-}
-
-/* Resume section: appears below quote and spans across columns */
-.resume {
-    /* Spans across all columns */
-    grid-column: 2 / span 3; 
-    grid-row: 1 / span 5;
+.right-side{
+    grid-column: 2;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap; 
+    gap: 15px
+}
+
+.title-main{
+    margin-top: 25%;
     text-align: center;
-    /*background-color: #FFF4F5;*/
-    padding: 20px;
-    border-radius: 8px;
+    font-size: 1.5rem;  
 }
 
-/* Styling for resume content */
-.p-resume, .p-resume-ex {
-    font-size: 1rem;
-    margin: 8px 0;
-    font-weight: 100;
+.footer{
+    text-align: right;
 }
 
-.p-resume-ex{
-    margin-left: 10%;
-    text-align: left;
-    
+.list-items{
+    list-style: none;
 }
 
-.p-resume-pending{
-    margin-bottom: 100px;
-}
-
-
-
-/* For smaller screens (less than 768px: mobile devices) */
 @media (max-width: 768px) {
-    .photo-quote-grid {
-        grid-template-columns: 1fr;  /* One column for smaller screens */
-        grid-template-rows: auto auto auto auto;
-    }
-
-    /* Photo section: Center image on small screens */
-    .photo {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    /* Author name section: Center text */
-    .author-name {
-        grid-column: 1;
-        grid-row: 2;
-        font-size: 1.2rem;
-    }
-
-    /* Quote section: Center quote text */
-    .quote {
-        grid-column: 1;
-        grid-row: 3;
-        font-size: 1.1rem;
-    }
-
-    /* Resume section: Center text and stack items */
-    .resume {
-        grid-column: 1;
-        grid-row: 4;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .p-resume, .p-resume-ex {
-        font-size: 0.9rem;
-        font-weight: 100;
-    }
+    
 }
 
