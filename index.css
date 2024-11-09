@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(to left, #f8c8d0, #f1a7b5, #f28d9f); /* Linear gradient background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.photo{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: solid;
+}
+
+.grid-idea {
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr 0.50fr;
+    height: 100vh;
+    place-items: center;
+}
+
+.self-picture{
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: auto 0.1fr auto;
+    justify-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.photo{
+    align-self: end;
+    grid-row: 1;
+}
+
+.name{
+    align-self: end;
+    grid-row: 2;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.occupation{
+    grid-row: 3;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.right-side{
+    grid-column: 3;
+}
+
+.first{
+    text-align: left;
+    font-size: larger;
+}
+
+.second{
+    text-align: right;
+    font-size: larger;
+}
+
+@media (max-width: 768px) {
+    .grid-idea{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .self-picture{
+        
+    }
+
+    .right-side{
+        
+    }
+}
