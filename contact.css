@@ -1,9 +1,39 @@
 body {
     background: linear-gradient(to left, #f8c8d0, #f1a7b5, #f28d9f); /* Pink gradient from left to right */
-    color: #fff; 
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+.title{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: large;
+}
+
+.grid-type{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+
+}
+
+.left-side{
+    grid-column: 1;
+}
+
+.right-side{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quote{
+    font-size: x-large;
+    font-style: italic;
+}
+
 
 .italics{
     font-style: italic;

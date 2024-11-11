@@ -16,7 +16,7 @@
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4"><em>Melinda Baca</em></span>
+                <span class="fs-4"><em>Feedback</em></span>
               </a>
         
               <ul class="nav nav-pills">
@@ -28,6 +28,70 @@
             </header>
           </div>
     </section>
+
+    <section class="feedbacks">
+      <div class="title"><b>Take a moment to indulge on some of Melinda's feedback:</b></div>
+
+      <p>"Melinda was instrumental in restructuring my resume during our workshop meetings. 
+        She taught me the 'what, how, and benefit' formula for bullet points, which led to 
+        interview opportunities in cyber security and DevOps. Her warmth, understanding, and accountability 
+        made a lasting impression. I hope she continues to help others showcase their best talents at BAH."
+      </p>
+
+      <p>
+        "Melinda is a resume word ninja! She transforms resumes from creaky-wooden stairs to sparkling-marble staircases.
+        Always prompt, courteous, and patient, she has a microscopic eye for detail. It's a privilege to work with such a diligent co-
+        worker. Bravo, Melinda!"
+      </p>
+
+      <p>
+        "Melinda is a model Marine and a high-level player on a team of extraordinary professionals. 
+        She exudes professionalism and personal presence that has inspired my confidence and justified 
+        my trust in her ability to provide high-level counseling's that are crucial to the promotion and 
+        selection process for thousands of service members and executives."
+      </p>
+
+      <p> 
+        <b style="font-size: x-large;">
+          Awards & Recognition
+        </b>
+        <br>
+        Platinum Award <br> Silver Award x2
+      </p>
+
+      <p>
+        If you had a pleasure of working with me, drop a line or two. I value all feedback.
+      </p>
+
+      <div>
+        <textarea class="custom-textarea" placeholder="Please enter your feedback!"></textarea>
+      </div>
+      
+      <div class="mb-5 second">
+          <button class="btn btn-outline-secondary btn-lg px-4 rounded-pil listen" type="button">
+              Send Feedback
+          </button>
+      </div>
+    </section>
+
+    <div class="footer">
+      Melinda Baca | Talent Management Professional
+    </div> 
+    
+    <script>
+      var text = document.querySelector(".custom-textarea");
+      
+      var button = document.querySelector(".listen");
+      button.addEventListener("click", function(){
+
+        if (text.value.trim() == ""){
+          alert("Error! Please enter a feedback before submitting!");
+        }else{
+          alert("Feedback Sumbitted!")
+          text.value = "";
+        }
+      });
+    </script>
     
 </body>
 </html>

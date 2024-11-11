@@ -29,18 +29,17 @@
     </section>
 
     <section class="container body">
+        <div class="title">
+            <em>"People will forget what you said, people will forget what you did, 
+                but people will never forget how you made them feel." - Maya Angelou</em>
+           </div>
+
         <div class="information px-4 py-5 my-5 text-center">
+            <section class="container grid-type">
 
-            <div class="container model">
-                <img src="./images/story.jpeg" alt="Tell me your story" width="35%" height="auto"/>
-            </div>
-
-
-            <section class="container">
-                <div class="container px-4 py-5" id="featured-3">
-                    <h2 class="pb-2 border-bottom">Areas of interests:</h2>
+                <div class="container px-4 py-5 left-side" id="featured-3">
+                    <h2 class="pb-2 border-bottom">Areas of interests</h2>
                     <div class="same-row row g-4 py-5 row-cols-1 row-cols-lg-3">
-
                       <div class="feature col">
                         <img src="./images/resume.jpeg" width="50px" height="auto"/>
                         <h3 class="fs-2 text-body-emphasis" style="margin-top: 10px;">Resume Assistance </h3>
@@ -82,7 +81,47 @@
                       </div>
                     </div>
                   </div>
+
+
+                <div class="right-side">
+                    <div class="container px-4 py-5 left-side" id="featured-3">
+                        <h2 class="pb-2 border-bottom">Stay in Touch</h2>
+                    </div>
+                    
+                    <div class="text-box">
+                        <form class="needs-validation" novalidate="">
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                              <label class="firstName">First name*</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                              <label class="lastName">Last name*</label>
+                              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="phoneNumber">Phone Number*</label>
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="" value="" required="">
+                            </div>
+  
+                            <div class="col-md-6 mb-3">
+                                <label class="email">Email*</label>
+                                <input type="text" class="form-control" id="emailAddress" placeholder="" value="" required="">
+                            </div>
+
+                            <div class="mb-5 second">
+                                <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill submit" type="button">
+                                    Submit
+                                </button>
+                              </div>
+                          </div>
+                      </div>
+                </div>
             </section>
+
+            <div class="quote">Let's explore your story and elevate it to new heights</div>
 
             <div class="container">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -102,19 +141,26 @@
              </div>
         </div>
     </section>
+    <script>
+        var button = document.querySelector(".second");
+        var firstName = document.querySelector("#firstName");
+        var lastName = document.querySelector("#lastName");
+        var phoneNumber = document.querySelector("#phoneNumber");
+        var emailAddress = document.querySelector("#emailAddress");
+        
+        
+        button.addEventListener("click", function(){
+            if ((firstName.value == "") && 
+                (lastName.value == "") && 
+                (phoneNumber.value == "") && 
+                (emailAddress.value == "")){
+                alert("Please fill in all of the required field!");
+            }else{
+                alert("Thank you! I will get back to you as soon as possible!");
+                firstName.value = ""; lastName.value = ""; phoneNumber.value = "", emailAddress.value = "";
+            }
+        });
 
-    
-
+    </script>
 </body>
 </html>
-
-
-
-<!-- Contact me:
- Email:
- Phone:
- Area of interest:
- Resume assistance
- Branding
- Process Improvement
- -->

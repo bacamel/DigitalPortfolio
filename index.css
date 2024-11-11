@@ -59,6 +59,10 @@ body {
     font-size: larger;
 }
 
+.footer{
+    text-align: right;
+}
+
 @media (max-width: 768px) {
     .grid-idea{
         display: flex;
