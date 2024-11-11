@@ -35,7 +35,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    flex-wrap: wrap; 
     gap: 15px;
 }
 
@@ -54,6 +53,18 @@ body {
 }
 
 @media (max-width: 768px) {
-    
+
+    .photo-quote-grid{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .right-side{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
