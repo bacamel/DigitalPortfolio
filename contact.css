@@ -7,15 +7,13 @@ body {
 .title{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    font-size: large;
+    font-size: x-large;
+    margin-bottom: -85px;
 }
 
 .grid-type{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 150px;
-
 }
 
 .left-side{
